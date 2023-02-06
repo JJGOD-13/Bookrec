@@ -1,7 +1,7 @@
 import os
 import flask
 from cs50 import SQL
-import helpers
+from helpers import login_required
 
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -26,5 +26,7 @@ def after_request(response):
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
+
+
 @app.route("/")
 @login_required
