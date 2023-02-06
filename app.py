@@ -15,5 +15,24 @@ db = SQL("sqlite:///database.db")
 
 
 @app.route("/")
-def hello_world():
-    return "<p>Hello, world!<p>"
+def index():
+    return render_template("index.html")
+
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return "TODO"
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    
+    # forget any user_id
+    flask.session.clear()
+
+    return "TODO"
+
+
+
+
