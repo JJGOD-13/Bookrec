@@ -16,7 +16,7 @@ db = SQL("sqlite:///database.db")
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return flask.render_template("index.html")
 
 
 
